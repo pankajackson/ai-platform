@@ -1,0 +1,17 @@
+# Copy to terraform.tfvars and fill with values from your Proxmox environment.
+proxmox_endpoint = "https://<proxmox-api-host>:8006/"
+proxmox_node = "<proxmox-node>"
+# Invalid sentinel: replace with an available Proxmox VM ID (100 or greater).
+vm_id = 0
+disk_datastore_id = "<vm-disk-datastore>"
+image_datastore_id = "<datastore-allowing-import-content>"
+snippet_datastore_id = "<datastore-allowing-snippets>"
+network_bridge = "<network-bridge>"
+ssh_public_keys = ["ssh-ed25519 <public-key-material> <key-comment>"]
+ipv4_address = null # DHCP; static requires ipv4_cidr and ipv4_gateway.
+ipv4_cidr = null
+ipv4_gateway = null
+dns_servers = []
+vlan_tag = null
+pci_devices = [] # Empty for CPU-only operation.
+# Proxmox API authentication comes from provider-supported environment variables.

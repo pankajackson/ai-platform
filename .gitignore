@@ -1,0 +1,41 @@
+# Historical reference only; intentionally excluded from the active project.
+/.archived/
+/.agents/
+/.aws/
+/.codex/
+
+# Terraform artifacts (keep .terraform.lock.hcl under version control).
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.tfvars
+!*.tfvars.example
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Runtime environments and credentials.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+vault-password.txt
+vault-password.*
+
+# Ansible-generated local files.
+*.retry
+ansible/inventory/hosts.yml
+ansible/collections/
+
+# Editors and operating systems.
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo
