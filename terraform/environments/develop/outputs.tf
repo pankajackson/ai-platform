@@ -29,12 +29,12 @@ output "ssh_connection" {
 }
 
 output "ssh_key_pub" {
-  sensitive = true
+  sensitive   = true
   description = "SSH destination template; replace with the VM address."
   value       = module.secrets.keys.vm_public_key
 }
 output "ssh_key_private" {
-  sensitive = true
+  sensitive   = true
   description = "SSH destination template; replace with the VM address."
   value       = module.secrets.keys.vm_private_key
 }

@@ -3,10 +3,10 @@ module "secrets" {
 }
 
 module "cloud_init" {
-  source             = "../../modules/cloud-init"
-  hostname           = var.vm_name
-  automation_user    = var.automation_user
-  ssh_public_keys    = concat(
+  source          = "../../modules/cloud-init"
+  hostname        = var.vm_name
+  automation_user = var.automation_user
+  ssh_public_keys = concat(
     var.ssh_public_keys,
     [module.secrets.keys.vm_public_key]
   )
