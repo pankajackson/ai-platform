@@ -1,5 +1,7 @@
 # Copy to terraform.tfvars and fill with values from your Proxmox environment.
 proxmox_endpoint = "https://<proxmox-api-host>:8006/"
+proxmox_username = <proxmox-username>
+proxmox_password = <proxmox-password>
 proxmox_node = "<proxmox-node>"
 # Invalid sentinel: replace with an available Proxmox VM ID (100 or greater).
 vm_id = 0

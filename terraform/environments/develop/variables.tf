@@ -13,6 +13,18 @@ variable "proxmox_tls_insecure" {
   default     = false
 }
 
+variable "proxmox_username" {
+  description = "Proxmox API username"
+  type        = string
+}
+
+variable "proxmox_password" {
+  description = "Proxmox API password"
+  type        = string
+  sensitive   = true
+  nullable    = false
+}
+
 variable "proxmox_node" {
   description = "Target Proxmox node."
   type        = string
